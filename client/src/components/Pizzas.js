@@ -1,7 +1,7 @@
-import React from 'react'
-import PizzaCart from './PizzaCart'
+import React from 'react';
+import PizzaCard from './PizzaCard';
 
-const Pizzas = () => {
+const Pizzas = ({ pizzas }) => {
   return (
     <div className='py-10'>
         <div className='flex flex-col items-center gap-4'>
@@ -13,11 +13,16 @@ const Pizzas = () => {
             Info about our pizzas, text text text text text text text text text text text
             </p>
         </div>
-        <div className='max-w-screen-x1 mx-auto'>
-            <PizzaCart />
+        <div className='max-w-screen-x1 mx-auto py-10 grid grid-cols-4 gap-10'>
+            {
+              pizzas.map((item) => (
+                <PizzaCard key={item.name} pizza={item} />
+                
+              ))
+            }
         </div>
     </div>
   )
 }
 
-export default Pizzas
+export default Pizzas;
