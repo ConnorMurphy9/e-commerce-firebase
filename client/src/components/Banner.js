@@ -1,9 +1,9 @@
-import React from 'react'
+import {React, useState} from 'react'
 import chicago from "../assets/chicago style pizza.jpg";
 import meat from "../assets/meat lover's pizza.jpg";
 import hawaiian from "../assets/hawaiian style pizza.jpg";
 import veggie from "../assets/veggie pizza.jpg";
-import { HiArrowRight, HiArrowLeft } from "react-icons/h1";
+import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 
 const Banner = () => {
     const [currentSlide, setCurrentSlide]= useState(0)
