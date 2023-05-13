@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cart from "./pages/Cart";
+import Pizza from "./components/Pizza";
 import {
   createBrowserRouter,
   Outlet,
@@ -15,6 +16,7 @@ const Layout = () => {
   return(
     <div>
       <Header />
+      <ScrollRestoration />
       <Outlet />
       <Footer />
     </div>
@@ -28,12 +30,16 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/",
-        element:<Home />,
+        element: <Home />,
         loader: pizzaData,
       },
       {
+        path:"/pizza/:id",
+        element: <Pizza />,
+      },
+      {
         path:"/cart",
-        element:<Cart />,
+        element: <Cart />,
       },
     ],
   },
