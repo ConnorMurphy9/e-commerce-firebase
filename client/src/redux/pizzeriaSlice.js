@@ -13,7 +13,6 @@ export const pizzeriaSlice = createSlice({
             const item = state.pizzaData.find(
                 (item) => item.name === action.payload.name
             );
-
             if (item) {
                 item.quantity += action.payload.quantity;
             } else {
@@ -46,8 +45,15 @@ export const pizzeriaSlice = createSlice({
                 item.quantity--;
             }
         },
+        addUser: (state, action) => {
+            state.userInfo = action.payload;
+        },
+        removeUser: (state) => {
+            state.userInfo = null;
+        },
     },
 });
 
-export const { addToCart, deleteItem, resetCart, incrementQuantity, decrementQuantity } = pizzeriaSlice.actions;
+export const { addToCart, deleteItem, resetCart, incrementQuantity, decrementQuantity, addUser, removeUser } = pizzeriaSlice.actions;
+
 export default pizzeriaSlice.reducer;

@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useLocation } from "react-router-dom";
 import { addToCart } from '../redux/pizzeriaSlice';
 import { ToastContainer, toast } from 'react-toastify';
+// import "react-toastify/dist/React-Toastify.css";
 
 const Pizza = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,8 @@ const Pizza = () => {
   const location = useLocation();
   useEffect(() => {
     setDetails(location.state.item);
-  }, []);
+    // console.log(location.state.item)
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     <div className='max-w-screen-x1 mx-auto my-10 flex gap-10'>
       <div className='w-2/5 relative'>

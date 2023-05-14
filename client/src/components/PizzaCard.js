@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from '../redux/pizzeriaSlice';
 import { ToastContainer, toast } from 'react-toastify';
 
+
 const PizzaCard = ({ pizza }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const PizzaCard = ({ pizza }) => {
     return String(_id).toLowerCase().split("").join("");
   }; 
   const rootId = idString(_id);
- console.log(rootId);
+//  console.log(rootId);
 
   const handleDetails = () => {
     navigate(`/pizza/${rootId}`, {
@@ -21,10 +22,10 @@ const PizzaCard = ({ pizza }) => {
         item: pizza,
       },
     })
-    console.log("details");
+    // console.log("details");
   }
   return (
-    <div className='group relative'>
+    <div className='w-full relative group'>
       <div 
         onClick={handleDetails}
         className='w-full h-96 cursor-pointer overflow-hidden'
@@ -37,9 +38,11 @@ const PizzaCard = ({ pizza }) => {
       </div>
       <div className='w-full border-[1px] px-2 py-4'>
         <div className='flex justify-between items-center'>
-          <h2 className='font-titleFont text-base font-bold'>
-            {pizza.name}
-          </h2>
+          <div>
+            <h2 className='font-titleFont text-base font-bold'>
+              {pizza.name}
+            </h2>
+          </div>
         </div>
         <div className='flex justify-end gap-2 relative overflow-hidden w-28 text-sm'>
           <div className='flex gap-2 transform group-hover:translate-x-24-transition-transform duration-500'>
@@ -70,7 +73,7 @@ const PizzaCard = ({ pizza }) => {
       </div>
       <ToastContainer
         position="top-left"
-        autoClose={2000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

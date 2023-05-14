@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Cart from "./pages/Cart";
 import Pizza from "./components/Pizza";
+import Login from "./pages/Login";
 import {
   createBrowserRouter,
   Outlet,
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
         path:"/cart",
         element: <Cart />,
       },
+      {
+        path:"/login",
+        element: <Login />,
+      }
     ],
   },
 ]);
