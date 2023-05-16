@@ -46,7 +46,7 @@ const PizzaCard = ({ pizza }) => {
         </div>
         <div className='flex justify-end gap-2 relative overflow-hidden w-28 text-sm'>
           <div className='flex gap-2 transform group-hover:translate-x-24-transition-transform duration-500'>
-            <p className='font-semibold'>{pizza.price}</p>
+            <p className='font-semibold'>${pizza.price}</p>
           </div>
         </div>
      
@@ -61,7 +61,7 @@ const PizzaCard = ({ pizza }) => {
             })
         )  & toast.success(`${pizza.name} is added`)
         } 
-        className='absolute z-20 w-[100px] text-gray-500 hover:text-gray-900 flex items-center gap-1 top-0 transform -translate-x-32 group-hover:translate-x-0 transition-transform cursor-pointer duration-500'>
+        className='absolute z-20 w-[100px] text-black hover:text-blue-700 flex items-center gap-1 top-0  group-hover:translate-x-0 transition-transform cursor-pointer duration-500'>
           Add to Cart{" "} 
           <span>
             <BsArrowRight />

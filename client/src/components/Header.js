@@ -1,6 +1,6 @@
 import React from "react";
 import cart from "../assets/cart.png";
-import userIcon from "../assets/userIcon.png"
+// import userIcon from "../assets/userIcon.png"
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -35,12 +35,13 @@ const Header = () => {
                         </div>
                     </Link>
                     <Link to="/login">
-                    <img className="w-8 h-8 rounded-full" src={userInfo ? userInfo.image : userIcon} alt="userLogo"
-                    />
+                    {/* <img className="w-8 h-8 rounded-full" src={userInfo ? userInfo.image : userIcon} alt="userLogo"
+                    /> */}
+
                     </Link>
-                    {userInfo && <p className="text-base font-titleFont font-semibold underline underline-offset-2">{userInfo.name}</p>}
+                    {userInfo && <p className="text-base font-semibold underline underline-offset-2">{userInfo.name}</p>}
                     <div>
-                        <a className="text-sm" target="_blank" href="https://icons8.com/icon/114007/customer">Customer</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+                      
                     </div>
                 </div>
             </div>
