@@ -82,14 +82,7 @@ const Login = () => {
           </button>
         )}
       </div>
-      <div className="w-full flex items-center justify-center gap-10">
-     
-        {userInfo && (
-          <button className="bg-black text-white text-base py-3 px-8 tracking-wide rounded-md hover:bg-gray-800 duration-300">
-            Sign Out
-          </button>
-        )}
-      </div>
+    
       <ToastContainer
         position="top-left"
         autoClose={2000}
