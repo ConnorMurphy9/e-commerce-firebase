@@ -1,0 +1,20 @@
+{
+  "name": "e-commerce-firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConnorMurphy9/e-commerce-firebase.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ConnorMurphy9/e-commerce-firebase/issues"
+  },
+  "homepage": "https://github.com/ConnorMurphy9/e-commerce-firebase#readme"
+}
