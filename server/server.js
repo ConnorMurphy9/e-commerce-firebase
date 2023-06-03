@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 app.use(cors());
 require("dotenv").config();
-const port = 3005
+const PORT = 3005
 const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 app.use(bodyParser.json());
@@ -23,6 +23,6 @@ app.post("/pay", async(req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on Port ${port}`)
+app.listen(process.env.PORT || 5000, () => {
+    console.log(`Server is running on Port ${PORT}`)
 });
