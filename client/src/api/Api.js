@@ -8,7 +8,6 @@ const options = {
     'X-RapidAPI-Host': 'pizza-and-desserts.p.rapidapi.com'
   }
 };
-
 export async function pizzaData() {
     const pizzas = await axios.request(options);
     return pizzas;
