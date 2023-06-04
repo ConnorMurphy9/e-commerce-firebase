@@ -6,6 +6,7 @@ app.use(cors());
 require("dotenv").config();
 const PORT = process.env.PORT || 3001;
 const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const path = require('path');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
