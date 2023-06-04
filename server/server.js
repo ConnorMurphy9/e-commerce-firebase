@@ -11,9 +11,9 @@ const path = require('path');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
-app.get("/", (req, res) => {
-    res.send("Hello World!")
-});
+// app.get("/", (req, res) => {
+//     res.send("Hello World!")
+// });
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/build')));
